@@ -44,3 +44,17 @@ Information: 20101 - Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 10), 
 INSERT INTO "Categorias" ("ImagemUrl", "Nome")
 VALUES (@p0, @p1)
 RETURNING "CategoriaId";
+Information: 14 - Now listening on: http://localhost:5066
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Users\M138517\Documents\weslley\estudos\APICatalogo\APICatalogo
+Warning: 3 - Failed to determine the https port for redirect.
+Information: 20101 - Executed DbCommand (19ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoriaId", "c"."ImagemUrl", "c"."Nome"
+FROM "Categorias" AS "c"
+WHERE "c"."CategoriaId" = @__id_0
+LIMIT 1
+Information: 20101 - Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Categorias"
+WHERE "CategoriaId" = @p0
+RETURNING 1;
